@@ -3,32 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trợ Lý Luyện Nói Tiếng Anh</title>
+    <title>Hệ Thống Luyện Nói & Kiểm Tra Tiếng Anh Pro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
     <header>
-        <h1>Trợ Lý Luyện Nói Tiếng Anh Có Phát Âm</h1>
-        <p>Học nhanh 15 chủ đề tự tin đối đáp - Hỗ trợ đọc mẫu chuẩn Anh-Mỹ</p>
+        <h1>Hệ Thống Ôn Luyện & Kiểm Tra Tiếng Anh Thông Minh</h1>
+        <p>Luyện nghe cuốn chiếu từng câu • Chế độ ẩn hiện kiểm tra phản xạ • Tự động lưu tiến độ</p>
     </header>
 
     <div class="controls">
-        <input type="text" id="searchInp" class="search-box" placeholder="Tìm kiếm tên chủ đề (ví dụ: Emotion, Education, Banking...)" oninput="filterTopics()">
+        <input type="text" id="searchInp" class="search-box" placeholder="Tìm kiếm tên chủ đề, từ khóa bằng tiếng Anh hoặc tiếng Việt..." oninput="filterTopics()">
+        
+        <select id="statusFilter" class="filter-select" onchange="filterTopics()">
+            <option value="all">🔍 Tất cả trạng thái</option>
+            <option value="Chưa học">🔴 Chưa học</option>
+            <option value="Đang luyện">🟡 Đang luyện</option>
+            <option value="Đã thuộc">🟢 Đã thuộc</option>
+        </select>
     </div>
 
     <div class="main-layout">
+        <!-- Menu danh sách bên trái -->
         <div class="topic-menu" id="menuContainer"></div>
 
+        <!-- Nội dung học và kiểm tra bên phải -->
         <div class="content-area" id="contentContainer">
             <div class="welcome-msg">
-                <h2>Vui lòng chọn một chủ đề ở danh mục bên trái để bắt đầu học!</h2>
+                <h2>Vui lòng chọn một chủ đề ở danh mục bên trái để bắt đầu học và kiểm tra phản xạ!</h2>
             </div>
         </div>
     </div>
 </div>
 
-<script href="script.js" src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
