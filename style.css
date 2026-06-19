@@ -1,0 +1,228 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    flex: 1;
+    min-width: 250px;
+    padding: 12px 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-box:focus {
+    border-color: var(--primary-color);
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.topic-menu {
+    background: var(--card-bg);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    max-height: 75vh;
+    overflow-y: auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.topic-item {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    border-left: 4px solid transparent;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.topic-item:hover {
+    background-color: #f1f5f9;
+}
+
+.topic-item.active {
+    background-color: #eff6ff;
+    color: var(--primary-color);
+    border-left-color: var(--primary-color);
+}
+
+.content-area {
+    background: var(--card-bg);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    min-height: 500px;
+}
+
+.welcome-msg {
+    text-align: center; 
+    color: var(--text-muted); 
+    margin-top: 100px;
+}
+
+.topic-title {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.section-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #0f172a;
+}
+
+.tts-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f1f5f9;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.btn-speak {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-speak:hover {
+    background-color: #059669;
+}
+
+.btn-stop {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-stop:hover {
+    background-color: #dc2626;
+}
+
+.speed-control {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.english-box {
+    background-color: #f8fafc;
+    border-left: 5px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+    font-size: 1.1rem;
+    color: #334155;
+    white-space: pre-line;
+}
+
+.vietnamese-box {
+    background-color: #fdfdfd;
+    border-left: 5px solid #10b981;
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+    font-size: 1.05rem;
+    color: #475569;
+    font-style: italic;
+    white-space: pre-line;
+}
+
+.tips-box {
+    background-color: #fffbeb;
+    border-left: 5px solid #f59e0b;
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+    font-size: 1rem;
+    color: #78350f;
+}
+
+.tips-box ul {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.tips-box li {
+    margin-bottom: 5px;
+}
