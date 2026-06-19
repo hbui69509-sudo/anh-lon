@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trợ Lý Luyện Nói Tiếng Anh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Trợ Lý Luyện Nói Tiếng Anh Có Phát Âm</h1>
+        <p>Học nhanh 15 chủ đề tự tin đối đáp - Hỗ trợ đọc mẫu chuẩn Anh-Mỹ</p>
+    </header>
+
+    <div class="controls">
+        <input type="text" id="searchInp" class="search-box" placeholder="Tìm kiếm tên chủ đề (ví dụ: Emotion, Education, Banking...)" oninput="filterTopics()">
+    </div>
+
+    <div class="main-layout">
+        <div class="topic-menu" id="menuContainer"></div>
+
+        <div class="content-area" id="contentContainer">
+            <div class="welcome-msg">
+                <h2>Vui lòng chọn một chủ đề ở danh mục bên trái để bắt đầu học!</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script href="script.js" src="script.js"></script>
+</body>
+</html>
